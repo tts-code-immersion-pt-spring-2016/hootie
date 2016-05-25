@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :tweets
+  has_many :relationships
+  has_many :friends, through: :relationships
 
   validates :username, presence: true, uniqueness: true
 
