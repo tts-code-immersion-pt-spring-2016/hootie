@@ -13,5 +13,5 @@
 
 <h3>Liked By:</h3>
 <% @tweet.likes.each do |like| %>
-  <%= like.user.username %><br>
+    <p><%= like.user.username %></p><br>
 <% end %>
